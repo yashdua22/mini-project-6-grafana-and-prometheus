@@ -1,0 +1,19 @@
+
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: 'slack-notifications'
+
+receivers:
+  - name: 'slack-notifications'
+    slack_configs:
+      - api_url: 'url of webhook slack api'
+        channel: 'your channel name'
+        send_resolved: true
+        title: "[{{ .Status | toUpper }}] {{ .GroupLabels.alertname }}"
+        text: >-
+          *Alert:* {{ .CommonAnnotations.summary }}
+          *Description:* {{ .CommonAnnotations.description }}
+          *Severity:* {{ .CommonLabels.severity }}
+          *Instance:* {{ .CommonLabels.instance }}
