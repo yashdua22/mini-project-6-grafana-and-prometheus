@@ -67,7 +67,7 @@ EC2 Security Group Inbound Rules
 Scaling to Multiple Instances
 
 If you want to gather metrics from 2 or more EC2 instances, check out this repo:
-👉 Automated Monitoring Alert Stack:
+👉 Automated Monitoring Alert Stack:https://github.com/yashdua12/project10-AUTOMATED-MONITORING-ALERT-STACK.git
 
 
 📊 Tech Stack
